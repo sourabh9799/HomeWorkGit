@@ -1,0 +1,814 @@
+
+user@DESKTOP-3L3ON1T MINGW64 ~
+$ mkdir HomeWorkGit
+
+user@DESKTOP-3L3ON1T MINGW64 ~
+$ pwd
+/c/Users/user
+
+user@DESKTOP-3L3ON1T MINGW64 ~
+$ cd HomeWorkGit
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit
+$ git init
+Initialized empty Git repository in C:/Users/user/HomeWorkGit/.git/
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ ls
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ ls -a
+./  ../  .git/
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ notepad firstHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ notepad secondHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ notepad thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        firstHome.txt
+        secondHome.txt
+        thirdHome.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git config core.autocrlf true
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git add first.txt
+fatal: pathspec 'first.txt' did not match any files
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git add firstHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   firstHome.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        secondHome.txt
+        thirdHome.txt
+
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git add secondHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git add thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   firstHome.txt
+        new file:   secondHome.txt
+        new file:   thirdHome.txt
+
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git commit -m 'All files committed'
+[master (root-commit) a858bff] All files committed
+ 3 files changed, 3 insertions(+)
+ create mode 100644 firstHome.txt
+ create mode 100644 secondHome.txt
+ create mode 100644 thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git log
+commit a858bff18a3365b705df49eeb60101301a0f30ec (HEAD -> master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ notepad firstHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   firstHome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git commit -m 'first file changed'
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   firstHome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git add firstHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git commit -m 'first file changed'
+[master 308430e] first file changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git log
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095 (HEAD -> master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ notepad secondHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   secondHome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git add secondHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git commit -m 'second file changed'
+[master 551ab87] second file changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git log
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d (HEAD -> master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ notepad thrirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ ls
+firstHome.txt  secondHome.txt  thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ notepad thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   thirdHome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git add thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   thirdHome.txt
+
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git commit -m 'third file changed'
+[master 941400f] third file changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git log
+commit 941400f970972d55a9a8fb598355b675e2f22bf4 (HEAD -> master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ cat firstHome.txt
+Hello, This is first file Home
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git checkout  941400f970972d55a9a8fb598355b675e2f22bf4
+Note: switching to '941400f970972d55a9a8fb598355b675e2f22bf4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 941400f third file changed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit ((941400f...))
+$ git log
+commit 941400f970972d55a9a8fb598355b675e2f22bf4 (HEAD, master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit ((941400f...))
+$ git checkout master
+Switched to branch 'master'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git checkout -b 'Dev'
+Switched to a new branch 'Dev'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ notepad FirstDev.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git status
+On branch Dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FirstDev.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git add FirstDev.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git status
+On branch Dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   FirstDev.txt
+
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git commit -m 'First Dev is commited'
+[Dev 1103e1a] First Dev is commited
+ 1 file changed, 1 insertion(+)
+ create mode 100644 FirstDev.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git status
+On branch Dev
+nothing to commit, working tree clean
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git log
+commit 1103e1a35773bcbe3c6d7286e100ee203e346524 (HEAD -> Dev)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:46:18 2021 +0530
+
+    First Dev is commited
+
+commit 941400f970972d55a9a8fb598355b675e2f22bf4 (master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git switch master
+Switched to branch 'master'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git checkout -b 'Test'
+Switched to a new branch 'Test'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ notepad firstTest.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ notepad secondTest.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ ls
+firstHome.txt  firstTest.txt  secondHome.txt  secondTest.txt  thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git status
+On branch Test
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        firstTest.txt
+        secondTest.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git add firstTest.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git add secondTest.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git status
+On branch Test
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   firstTest.txt
+        new file:   secondTest.txt
+
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git commit -m 'All two test files are commited'
+[Test 7617a2e] All two test files are commited
+ 2 files changed, 2 insertions(+)
+ create mode 100644 firstTest.txt
+ create mode 100644 secondTest.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git status
+On branch Test
+nothing to commit, working tree clean
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git log
+commit 7617a2e8f0be38a94810ecbfbf4dd679376b57f6 (HEAD -> Test)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:50:40 2021 +0530
+
+    All two test files are commited
+
+commit 941400f970972d55a9a8fb598355b675e2f22bf4 (master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Test)
+$ git switch Dev
+Switched to branch 'Dev'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ ls
+FirstDev.txt  firstHome.txt  secondHome.txt  thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ notepad FirstDev.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git status
+On branch Dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   FirstDev.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ cat FirstDev.txt
+New dev block is created with only line
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git add FirstDev.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git status
+On branch Dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   FirstDev.txt
+
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git log
+commit 1103e1a35773bcbe3c6d7286e100ee203e346524 (HEAD -> Dev)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:46:18 2021 +0530
+
+    First Dev is commited
+
+commit 941400f970972d55a9a8fb598355b675e2f22bf4 (master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git commit -m 'First Dev has some changes'
+[Dev 6f0633d] First Dev has some changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git log
+commit 6f0633d7197dcf10b5cf0287a379c6b90ef0c821 (HEAD -> Dev)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:54:49 2021 +0530
+
+    First Dev has some changes
+
+commit 1103e1a35773bcbe3c6d7286e100ee203e346524
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:46:18 2021 +0530
+
+    First Dev is commited
+
+commit 941400f970972d55a9a8fb598355b675e2f22bf4 (master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git status
+On branch Dev
+nothing to commit, working tree clean
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (Dev)
+$ git switch master
+Switched to branch 'master'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git log
+commit 941400f970972d55a9a8fb598355b675e2f22bf4 (HEAD -> master)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git merge Dev
+Updating 941400f..6f0633d
+Fast-forward
+ FirstDev.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 FirstDev.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git log
+commit 6f0633d7197dcf10b5cf0287a379c6b90ef0c821 (HEAD -> master, Dev)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:54:49 2021 +0530
+
+    First Dev has some changes
+
+commit 1103e1a35773bcbe3c6d7286e100ee203e346524
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:46:18 2021 +0530
+
+Merge made by the 'recursive' strategy.
+ firstTest.txt  | 1 +
+ secondTest.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 firstTest.txt
+ create mode 100644 secondTest.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git log
+commit e37f458791b2875cecb0d35bfffb3964655bfb2e (HEAD -> master)
+Merge: 6f0633d 7617a2e
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:57:01 2021 +0530
+
+    Merge branch 'Test'
+
+commit 6f0633d7197dcf10b5cf0287a379c6b90ef0c821 (Dev)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:54:49 2021 +0530
+
+    First Dev has some changes
+
+commit 7617a2e8f0be38a94810ecbfbf4dd679376b57f6 (Test)
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:50:40 2021 +0530
+
+    All two test files are commited
+
+commit 1103e1a35773bcbe3c6d7286e100ee203e346524
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:46:18 2021 +0530
+
+    First Dev is commited
+
+commit 941400f970972d55a9a8fb598355b675e2f22bf4
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:39:15 2021 +0530
+
+    third file changed
+
+commit 551ab87e6aea3277f9418973bf175d36cdaf108d
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:37:07 2021 +0530
+
+    second file changed
+
+commit 308430eda2cf3d3402df6834d4bbc68d1133d095
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:35:27 2021 +0530
+
+    first file changed
+
+commit a858bff18a3365b705df49eeb60101301a0f30ec
+Author: sourabh9799 <sourabh.patil9028@gmail.com>
+Date:   Sun Jul 18 18:31:49 2021 +0530
+
+    All files committed
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git remote add origin https://github.com/sourabh9799/HomeWorkGit.git
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/sourabh9799/HomeWorkGit.git'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git remote -v
+origin  https://github.com/sourabh9799/HomeWorkGit.git (fetch)
+origin  https://github.com/sourabh9799/HomeWorkGit.git (push)
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git config --global --edit
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/sourabh9799/HomeWorkGit.git'
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git remote add origin https://github.com/sourabh9799/HomeWorkGit.git
+error: remote origin already exists.
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ git push -u origin master
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (26/26), 2.16 KiB | 245.00 KiB/s, done.
+Total 26 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/sourabh9799/HomeWorkGit.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkGit (master)
+$ cd
+
+user@DESKTOP-3L3ON1T MINGW64 ~
+$ mkdir HomeWorkClone
+
+user@DESKTOP-3L3ON1T MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ HomeWorkClone/
+ HomeWorkGit/
+ LetsLearnGit/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{e76d1a17-d0bb-11eb-9dec-54e1ad14c67f}.TM.blf
+ NTUSER.DAT{e76d1a17-d0bb-11eb-9dec-54e1ad14c67f}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{e76d1a17-d0bb-11eb-9dec-54e1ad14c67f}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Tracing/
+ Videos/
+ eclipse-workspace/
+ git/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+
+user@DESKTOP-3L3ON1T MINGW64 ~
+$ cd HomeWorkClone
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkClone
+$ git clone https://github.com/sourabh9799/HomeWorkGit.git
+Cloning into 'HomeWorkGit'...
+remote: Enumerating objects: 26, done.
+remote: Counting objects: 100% (26/26), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 26 (delta 6), reused 26 (delta 6), pack-reused 0
+Receiving objects: 100% (26/26), done.
+Resolving deltas: 100% (6/6), done.
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkClone
+$ ls
+HomeWorkGit/
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkClone
+$ cd HomeWorkGit/
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkClone/HomeWorkGit (master)
+$ ls
+FirstDev.txt  firstHome.txt  firstTest.txt  secondHome.txt  secondTest.txt  thirdHome.txt
+
+user@DESKTOP-3L3ON1T MINGW64 ~/HomeWorkClone/HomeWorkGit (master)
+$ notepad Solution.txt
+
