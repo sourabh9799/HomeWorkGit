@@ -1,1 +1,1 @@
-New dev block is created
+New dev block is created with only line
